@@ -10,20 +10,23 @@ sequenceDiagram
     actor Cliente
     actor Servidor
 
-    Cliente->>Servidor: Solicito comunicarme de forma segura con tus servicios
-    Servidor-->>Cliente: Te paso mi certificado digital
-    Cliente->>Servidor: Verifico que el certificado sea válido y corresponda al servidor...
-    Cliente<->>Servidor: Mecanismos de criptografía asimétrica para intercambio de claves
-    Cliente<->>Servidor: Establecen una clave de sesión compartida
-    Cliente<->>Servidor: Utilizan la clave de sesión mediante cifrado simétrico
+    Cliente->>Servidor: 1. Solicito comunicarme de forma segura con tus servicios
+    Servidor-->>Cliente: 2. Te paso mi certificado digital
     
-    Note over Cliente,Servidor: Comunicación segura establecida
+    Note over Cliente: 3. Verifico que el certificado sea válido y corresponda al servidor.<br/>Si la validación es correcta, continuo; si no, se interrumpe.
+    Cliente->>Servidor: Confirmación de validación
+    
+    Note over Cliente,Servidor: 4. Criptografía asimétrica para intercambio seguro de claves
+    Cliente->>Servidor: Intercambio de claves
+    Servidor-->>Cliente: Confirmación de claves
+    
+    Note over Cliente,Servidor: 5. Establecen una clave de sesión compartida
+    
+    Note over Cliente,Servidor: 6. Utilizan la clave de sesión mediante cifrado simétrico
     
     Cliente->>Servidor: HTTP Request
     Servidor-->>Cliente: HTTP Response
 ```
-
----
 
 ## Pasos del Proceso
 
