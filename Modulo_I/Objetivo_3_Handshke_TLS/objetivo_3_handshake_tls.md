@@ -13,16 +13,14 @@ sequenceDiagram
     Cliente->>Servidor: 1. Solicito comunicarme de forma segura con tus servicios
     Servidor-->>Cliente: 2. Te paso mi certificado digital
     
-    Note over Cliente: 3. Verifico que el certificado sea válido y corresponda al servidor.<br/>Si la validación es correcta, continuo; si no, se interrumpe.
-    Cliente->>Servidor: Confirmación de validación
+    Note over Cliente: 3. Verifico que el certificado sea valido y corresponda al servidor
     
-    Note over Cliente,Servidor: 4. Criptografía asimétrica para intercambio seguro de claves
-    Cliente->>Servidor: Intercambio de claves
+    Cliente->>Servidor: 4. Intercambio de claves (criptografia asimetrica)
     Servidor-->>Cliente: Confirmación de claves
     
-    Note over Cliente,Servidor: 5. Establecen una clave de sesión compartida
+    Note over Cliente,Servidor: 5. Establecen una clave de sesion compartida
     
-    Note over Cliente,Servidor: 6. Utilizan la clave de sesión mediante cifrado simétrico
+    Note over Cliente,Servidor: 6. Cifrado simetrico para proteger la comunicacion HTTP
     
     Cliente->>Servidor: HTTP Request
     Servidor-->>Cliente: HTTP Response
