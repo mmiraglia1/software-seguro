@@ -1,0 +1,5 @@
+Un ataque de fuerza bruta es un tipo de ataque en el que se prueban muchas combinaciones de datos hasta dar con la combinación correcta.
+
+Un ataque de diccionario es un tipo de ataque en el que se utilizan listas de palabras y contraseñas ya predefinidas (por ejemplo palabras que se suelen utilizar comunmente en credenciales, tales como: admin, superadmin, test, 1234, etc) para intentar encontrar la combinación correcta.
+
+Un desarrollador para poder defenderse de este tipo de ataques puede implementar un Rate Limit en el servidor, es decir limitar la cantidad de peticiones provenientes de una misma IP, lo que limitaría al atacante. Por ejemplo, podría limitar al atacante a realizar 5 intentos y luego exigir esperar 1 hora para volver a intentarlo de nuevo. De esta forma, se mitiga la automatización de este tipo de ataques durante un período de tiempo establecido por el servidor.
