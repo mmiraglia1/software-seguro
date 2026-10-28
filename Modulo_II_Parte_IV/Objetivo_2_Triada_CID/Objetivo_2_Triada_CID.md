@@ -1,4 +1,5 @@
-La tríada CIA (Confidencialidad, Integridad y Disponibilidad) representa tres principios fundamentales de la seguridad de la información. Se utilizan para evaluar qué aspectos de la información o de un sistema pueden verse afectados por una vulnerabilidad o un ataque.
+
+La tríada CID (Confidencialidad, Integridad y Disponibilidad) representa tres principios fundamentales de la seguridad de la información. Se utilizan para evaluar qué aspectos de la información o de un sistema pueden verse afectados por una vulnerabilidad o un ataque.
 
 ## 1. Vulnerabilidad que compromete la Confidencialidad
 
